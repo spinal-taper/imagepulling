@@ -24,6 +24,7 @@
         LstBoxLetters.Items.Clear()
         strAsterisks = ""
         'Reset the buttons for a new game.
+        'Each of these buttons refers to a letter button displayed on the GUI. It enables and makes them visible.
         btnA.Enabled = True
         btnB.Enabled = True
         btnC.Enabled = True
