@@ -1,0 +1,87 @@
+    Private Sub btnGo_Click(sender As Object, e As EventArgs) Handles btnPlay.Click
+        '-----------------------------------------------------------------------------------------
+        'Subroutine: btnGo_Click
+        'Author: Panos Kumasaka and Dawn Rentschler
+        'Date: 3/16/17
+        'Description: Sets the game up for a new round.
+        '-------------------------------------------------------------------------------------------------
+
+        'Sets the text to play in case it says play again due to a previous play session.
+        btnPlay.Text = "Play"
+        'Reset variables to be ready for a a new game.
+        intCount = 0
+        intImageNumber = 0
+        InitImages()
+        'Create a string to place into the label.
+        Dim strAsterisks As String = " "
+        'Select a random word
+        RandomWordGenerator()
+        'gets the index number of strRandomWord
+        intNumChars = strRandomWord.Length
+        MsgBox("The number of letters is " + intNumChars.ToString + ".")
+        'clears lblWord and lstBoxLetters
+        lblWord.Text = ""
+        LstBoxLetters.Items.Clear()
+        strAsterisks = ""
+        'Reset the buttons for a new game.
+        btnA.Enabled = True
+        btnB.Enabled = True
+        btnC.Enabled = True
+        btnD.Enabled = True
+        btnE.Enabled = True
+        btnF.Enabled = True
+        btnG.Enabled = True
+        btnH.Enabled = True
+        btnI.Enabled = True
+        btnJ.Enabled = True
+        btnK.Enabled = True
+        btnL.Enabled = True
+        btnM.Enabled = True
+        btnN.Enabled = True
+        btnO.Enabled = True
+        btnP.Enabled = True
+        btnQ.Enabled = True
+        btnR.Enabled = True
+        btnS.Enabled = True
+        btnT.Enabled = True
+        btnU.Enabled = True
+        btnV.Enabled = True
+        btnW.Enabled = True
+        btnX.Enabled = True
+        btnY.Enabled = True
+        btnZ.Enabled = True
+
+        btnA.Visible = True
+        btnB.Visible = True
+        btnC.Visible = True
+        btnD.Visible = True
+        btnE.Visible = True
+        btnF.Visible = True
+        btnG.Visible = True
+        btnH.Visible = True
+        btnI.Visible = True
+        btnJ.Visible = True
+        btnK.Visible = True
+        btnL.Visible = True
+        btnM.Visible = True
+        btnN.Visible = True
+        btnO.Visible = True
+        btnP.Visible = True
+        btnQ.Visible = True
+        btnR.Visible = True
+        btnS.Visible = True
+        btnT.Visible = True
+        btnU.Visible = True
+        btnV.Visible = True
+        btnW.Visible = True
+        btnX.Visible = True
+        btnY.Visible = True
+        btnZ.Visible = True
+        'puts *in place where letter for strRandomWord would go lblWord =
+        Do Until intNumChars = intCount
+            strAsterisks = strAsterisks.Insert(intCount, "*")
+            intCount = intCount + 1
+        Loop
+        'Places the asterisks into the label where the word will go.
+        lblWord.Text = strAsterisks
+    End Sub
